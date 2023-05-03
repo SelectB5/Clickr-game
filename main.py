@@ -11,7 +11,6 @@ adworkers = 0
 garrett = 0
 ryan = 0
 ayden = 0
-Doubleclickupg = 0
 Doubleclick = 0
 Golden_garrett = 0
 resets = 0
@@ -318,6 +317,7 @@ while True:
         adworkers = 0
         Doubleclick = 0
         garrett = 0
+        Golden_garrett = 0
         ayden = 0
         doubleclick_bought = False
         resets += 1
@@ -330,6 +330,25 @@ while True:
     if resets < mega_resets:
       print("You are not wealthy enough to gain a mega reset!\nYou need {} resets to mega reset!".format(mega_reset_cost))
     else:
+      print("You meet the requirements to mega reset.\nAre you sure?(YOU WILL LOSE 4 RESETS AND EVERYTHING ELSE")
+      sure = input("y/n ")
+      if sure == "y":
+        print("Wonderful!\nI you will now recieve {} coins per worker!".format(mega_resets+5))
+        coins = 0
+        workers = 1
+        adworkers = 0
+        Doubleclick = 0
+        garrett = 0
+        Golden_garrett = 0
+        ayden = 0
+        doubleclick_bought = False
+        resets -= 4
+        mega_resets += 1
+        mega_reset_cost *= 2
+      else:
+        clear()
+        print("I understand.")
+      
       pass
   elif run_arg == "":
    aval = adworkers * (Doubleclick * (resets + 1) + 4)
@@ -340,6 +359,8 @@ while True:
    total_val = val + aval + ayval + garval + ryval
    if doubleclick_bought:
       total_val *= 2
+   if mega_resets >= 1:
+      total_val *= 5
    coins += total_val
    
     
@@ -396,3 +417,7 @@ while True:
   if run_arg == "/sdc":
     new_dc = input("Doubleclick: ")
     Doubleclick = int(new_dc)
+  if run_arg == "/sr":
+    new_resets = input("Resets: ")
+    resets = int(new_resets)
+    
