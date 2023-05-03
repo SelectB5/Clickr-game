@@ -11,6 +11,7 @@ adworkers = 0
 garrett = 0
 ryan = 0
 ayden = 0
+Doubleclickupg = 0
 Doubleclick = 0
 Golden_garrett = 0
 resets = 0
