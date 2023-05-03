@@ -229,7 +229,7 @@ while True:
                     input("Press [ENTER] to continue.")
                     ref = ""
                 break
-        elif selected_id == "4" and coins >= garret_cost:
+        elif selected_id == "3" and coins >= garret_cost:
             while True:
                 clear()
                 print("How many Garretts would you like to purchase?")
@@ -255,7 +255,7 @@ while True:
                     input("Press [ENTER] to continue.")
                     ref = ""
                 break
-        elif selected_id == "3" and coins >= ryan_cost:
+        elif selected_id == "4" and coins >= ryan_cost:
             while True:
                 clear()
                 print("How many Ryans would you like to purchase?")
